@@ -2,11 +2,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
 
 public class SistemaBiblioteca {
 
     Map <String, Material>catalogo = new HashMap<>();
     Map<String, List<String>>listaEspera = new HashMap<>();
+    Set<String> miembros = new HashSet<>();
 
     public void registrarMaterial(Material m){
         catalogo.put( m.getCodigo(), m);
@@ -38,6 +41,14 @@ public class SistemaBiblioteca {
            }
            return  null;
        }
+
+    public boolean registrarMiembro(String usuario){
+       return miembros.add(usuario);
+    }
+
+    public boolean tieneMembresía(String usuario){
+        return miembros.contains(usuario);
+    }
 
 
 }
