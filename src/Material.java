@@ -33,7 +33,7 @@ public abstract class Material implements Catalogable {
 
     public abstract String getTipo();
 
-    public String mostrarInfo (){
+    public String mostrarInfo () {
         return String.format("Tipo: %s%n Titulo: %s%n Año: %d%n Disponible: %b%n-------------------------------------",
                 getTipo(),
                 titulo,

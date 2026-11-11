@@ -12,8 +12,6 @@ public class Main {
         sistema.registrarMaterial(libro1);
         sistema.mostrarCatalogo();
 
-
-
     }
 }
 
