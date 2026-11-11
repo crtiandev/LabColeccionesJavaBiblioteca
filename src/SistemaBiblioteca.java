@@ -9,11 +9,14 @@ public class SistemaBiblioteca {
         catalogo.put( m.getCodigo(), m);
     }
 
-    public Material buscarMaterial (Material m){
-        catalogo.get(m.getCodigo());
-        if (m.getCodigo() == null || m.getCodigo().isBlank()){
-            return null;
+    public Material buscarMaterial (String codigo){
+        return catalogo.get(codigo);
+    }
+
+    public void mostrarCatalogo (){
+        for (Map.Entry<String , Material> entry : catalogo.entrySet()){
+            System.out.println("Código: " + entry.getKey() + " Material: " + entry.getValue().mostrarInfo());
         }
-        return m;
+
     }
 }

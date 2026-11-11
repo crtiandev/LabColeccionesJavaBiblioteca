@@ -1,3 +1,5 @@
+import javax.print.DocFlavor;
+
 public abstract class Material implements Catalogable {
     protected String codigo;
     protected String titulo;
@@ -31,14 +33,11 @@ public abstract class Material implements Catalogable {
 
     public abstract String getTipo();
 
-    public void mostrarInfo (){
-        System.out.println(String.format("Tipo: %s%n Titulo: %s%n Año: %d%n Disponible: %b%n",
+    public String mostrarInfo (){
+        return String.format("Tipo: %s%n Titulo: %s%n Año: %d%n Disponible: %b%n-------------------------------------",
                 getTipo(),
                 titulo,
                 anio,
-                disponible
-        ));
-
-        System.out.println("-------------------------------------");
+                disponible);
     }
 }
